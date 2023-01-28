@@ -2,6 +2,7 @@ body {
 	padding: 12px 10px;
 }
 
+/** buttons section */
 .buttons__container {
 	display: flex;
 	flex-direction: column;
@@ -39,4 +40,10 @@ body {
 
 .buttons-blue:hover {
 	background: var(--dark-blue-400);
+}
+
+/* output text section */
+.output__container:first-child {
+	font-size: 2rem;
+	color: var(--gray-400);
 }
