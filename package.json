@@ -1,0 +1,27 @@
+{
+  "name": "challenge_encriptador",
+  "version": "1.0.0",
+  "description": "encriptador",
+  "main": "index.html",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/Kyokox1/encriptador_alura_challenge.git"
+  },
+  "author": "kyoko",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/Kyokox1/encriptador_alura_challenge/issues"
+  },
+  "homepage": "https://github.com/Kyokox1/encriptador_alura_challenge#readme",
+  "devDependencies": {
+    "eslint": "^8.0.1",
+    "eslint-config-prettier": "^8.6.0",
+    "eslint-config-standard": "^17.0.0",
+    "eslint-plugin-import": "^2.25.2",
+    "eslint-plugin-n": "^15.0.0",
+    "eslint-plugin-promise": "^6.0.0"
+  }
+}

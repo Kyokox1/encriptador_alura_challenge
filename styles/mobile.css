@@ -10,10 +10,10 @@ body {
 
 .buttons__container__caution {
 	display: flex;
-	font-size: 0.8rem;
-	margin-bottom: -15px;
 	align-items: center;
 	gap: 5px;
+	margin-bottom: -15px;
+	font-size: 0.8rem;
 	color: var(--gray-400);
 }
 
