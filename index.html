@@ -38,7 +38,11 @@
 		<main>
 			<!-- input text -->
 			<section class="input__area">
-				<textarea placeholder="Ingrese el texto aquí"></textarea>
+				<textarea
+					id="input-text"
+					autofocus
+					placeholder="Ingrese el texto aquí"
+				></textarea>
 			</section>
 			<!-- buttons -->
 			<section class="buttons__container">
@@ -60,18 +64,24 @@
 
 					Solo letras minúsculas y sin acentos
 				</p>
-				<button class="buttons buttons-blue">Encriptar</button>
-				<button class="buttons">Desencriptar</button>
+				<button id="encrypt-button" class="buttons buttons-blue">
+					Encriptar
+				</button>
+				<button id="decrypt-button" class="buttons">
+					Desencriptar
+				</button>
 			</section>
 			<!-- output text -->
 			<section class="output__container">
-				<p class="output__message output__none">
-					Ningun mensaje fue encontrado
-				</p>
-				<p class="output__message output__none">
+				<p id="caution-message">Ningún mensaje fue encontrado</p>
+				<p id="result-message" class="output__message">
 					Ingresa el texto que desees encriptar o desencriptar
 				</p>
+				<button id="copy-button" class="buttons hidden__element">
+					Copiar
+				</button>
 			</section>
 		</main>
+		<script type="module" src="./js/index.js"></script>
 	</body>
 </html>
