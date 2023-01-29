@@ -51,6 +51,7 @@ main {
 }
 
 .buttons {
+	width: 100%;
 	max-width: 350px;
 	padding: 20px;
 	border-radius: 24px;
@@ -74,11 +75,9 @@ main {
 	background: var(--dark-blue-400);
 }
 
-/* output text section */
+/** output text section */
 .output__container {
-	display: flex;
-	flex-direction: column;
-	gap: 8px;
+	position: relative;
 	padding: 20px;
 	text-align: center;
 	color: var(--gray-500);
@@ -87,16 +86,44 @@ main {
 	box-shadow: 0px 24px 32px -8px rgba(0, 0, 0, 0.08);
 }
 
+.output__container__div {
+	display: flex;
+	flex-direction: column;
+	gap: 8px;
+}
+
 .output__container p:first-child {
 	font-size: 1.5rem;
 	font-weight: 700;
 	color: var(--gray-400);
 }
 
+#result-message {
+	max-height: 80vh;
+	overflow: auto;
+	font-size: 1.7rem;
+	font-weight: 400;
+}
+
 .hidden__element {
 	display: none;
 }
 
-/* .output__message {
-	color: var(--gray-500);
-} */
+/** Copy toast */
+
+.toast {
+	position: absolute;
+	bottom: 100px;
+	left: 50%;
+	transform: translateX(-50%);
+	width: max-content;
+	padding: 12px;
+	font-size: 1.2rem;
+	font-weight: 700;
+	color: #2d572c;
+	background-color: #30ff2499;
+	border-radius: 6px;
+	visibility: hidden;
+	opacity: 0;
+	transition: 0.5s all ease;
+}

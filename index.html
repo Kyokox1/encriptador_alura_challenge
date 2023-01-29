@@ -16,7 +16,7 @@
 		<link rel="stylesheet" href="./styles/mobile.css" />
 	</head>
 	<body>
-		<!-- header -->
+		<!-- ? header -->
 		<header class="header">
 			<h1>
 				<svg
@@ -36,7 +36,7 @@
 			</h1>
 		</header>
 		<main>
-			<!-- input text -->
+			<!-- ? input text -->
 			<section class="input__area">
 				<textarea
 					id="input-text"
@@ -44,7 +44,7 @@
 					placeholder="Ingrese el texto aquí"
 				></textarea>
 			</section>
-			<!-- buttons -->
+			<!-- ? buttons -->
 			<section class="buttons__container">
 				<p class="buttons__container__caution">
 					<span>
@@ -71,15 +71,24 @@
 					Desencriptar
 				</button>
 			</section>
-			<!-- output text -->
-			<section class="output__container">
-				<p id="caution-message">Ningún mensaje fue encontrado</p>
-				<p id="result-message" class="output__message">
-					Ingresa el texto que desees encriptar o desencriptar
-				</p>
-				<button id="copy-button" class="buttons hidden__element">
-					Copiar
-				</button>
+			<!-- ? output text -->
+			<section id="output-container" class="output__container">
+				<!-- * desaparece cuando se ejecuta la funcion encrypt o decrypt -->
+				<div id="default-appears" class="output__container__div">
+					<p>Ningún mensaje fue encontrado</p>
+					<p>Ingresa el texto que desees encriptar o desencriptar</p>
+				</div>
+				<!-- * aparece cuando se ejecuta la funcion encrypt o decrypt  -->
+				<div
+					id="execution-appears"
+					class="output__container__div hidden__element"
+				>
+					<p id="result-message"></p>
+					<button id="copy-button" class="buttons hidden__element">
+						Copiar
+					</button>
+					<div id="toast" class="toast">Texto Copiado</div>
+				</div>
 			</section>
 		</main>
 		<script type="module" src="./js/index.js"></script>

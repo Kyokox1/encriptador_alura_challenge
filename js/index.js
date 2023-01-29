@@ -1,51 +1,59 @@
-import { copyTextInView } from './copyTextInView.js';
+import { HIDDEN_ELEMENT } from './constants.js';
 import { decrypt } from './decrypt.js';
 import { encrypt } from './encrypt.js';
+import { copyTextInView } from './copyTextInView.js';
+import { useToast } from './useToast.js';
 
 const $ = (element) => document.getElementById(element);
 
 const inputText = $('input-text');
 const encryptButton = $('encrypt-button');
 const decryptButton = $('decrypt-button');
+const outputContainer = $('output-container');
+const outputDefaultApears = $('default-appears');
+const outputExecucionApears = $('execution-appears');
 const resultMessage = $('result-message');
-const cautionMessage = $('caution-message');
 const copyButton = $('copy-button');
 
+// TODO: refactorizar Código handleClickEncrypt y handleClickDecrypt
 const handleClickEncrypt = () => {
 	const textEncrypted = encrypt(inputText.value);
-	resultMessage.scrollIntoView({ behavior: 'smooth', block: 'center' });
+	outputContainer.scrollIntoView({ behavior: 'smooth', block: 'center' });
 
 	if (!textEncrypted) {
-		resultMessage.classList.remove('hidden__element');
-		resultMessage.innerText =
-			'Ingresa el texto que desees encriptar o desencriptar';
+		outputDefaultApears.classList.remove(HIDDEN_ELEMENT);
+		outputExecucionApears.classList.add(HIDDEN_ELEMENT);
+		copyButton.classList.add(HIDDEN_ELEMENT);
 		return;
 	}
 
 	resultMessage.innerText = textEncrypted;
-	cautionMessage.classList.add('hidden__element');
-	copyButton.classList.remove('hidden__element');
+	outputDefaultApears.classList.add(HIDDEN_ELEMENT);
+	outputExecucionApears.classList.remove(HIDDEN_ELEMENT);
+	copyButton.classList.remove(HIDDEN_ELEMENT);
 	inputText.value = '';
 };
 
 const handleClickDecrypt = () => {
 	const textEncrypted = decrypt(inputText.value);
-	resultMessage.scrollIntoView({ behavior: 'smooth', block: 'center' });
+	outputContainer.scrollIntoView({ behavior: 'smooth', block: 'center' });
 
 	if (!textEncrypted) {
-		resultMessage.classList.remove('hidden__element');
-		resultMessage.innerText =
-			'Ingresa el texto que desees encriptar o desencriptar';
+		outputDefaultApears.classList.remove(HIDDEN_ELEMENT);
+		outputExecucionApears.classList.add(HIDDEN_ELEMENT);
+		copyButton.classList.add(HIDDEN_ELEMENT);
 		return;
 	}
 
 	resultMessage.innerText = textEncrypted;
-	cautionMessage.classList.add('hidden__element');
+	outputDefaultApears.classList.add(HIDDEN_ELEMENT);
+	outputExecucionApears.classList.remove(HIDDEN_ELEMENT);
+	copyButton.classList.remove(HIDDEN_ELEMENT);
 	inputText.value = '';
 };
 
 const handleClickCopyText = () => {
-	copyTextInView(resultMessage.innerText);
+	copyTextInView(resultMessage.innerText).then(useToast);
 };
 
 encryptButton.addEventListener('click', handleClickEncrypt);

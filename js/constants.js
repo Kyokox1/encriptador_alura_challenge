@@ -5,3 +5,5 @@ export const WORDS = [
 	['o', 'ober'],
 	['u', 'ufat']
 ];
+
+export const HIDDEN_ELEMENT = 'hidden__element';
