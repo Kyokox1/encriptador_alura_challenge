@@ -15,7 +15,7 @@ const outputExecucionApears = $('execution-appears');
 const resultMessage = $('result-message');
 const copyButton = $('copy-button');
 
-// TODO: refactorizar Código handleClickEncrypt y handleClickDecrypt
+// TODO: refactorizar Código handleClickEncrypt y handleClickDecrypt (encapsular código repititivo)
 const handleClickEncrypt = () => {
 	const textEncrypted = encrypt(inputText.value);
 	outputContainer.scrollIntoView({ behavior: 'smooth', block: 'center' });

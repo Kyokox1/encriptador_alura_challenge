@@ -11,6 +11,7 @@ main {
 	flex-direction: column;
 	gap: 50px;
 }
+
 /** input text section  */
 .input__area textarea {
 	width: 100%;
