@@ -14,9 +14,11 @@
 		<link rel="stylesheet" href="./styles/reset.css" />
 		<link rel="stylesheet" href="./styles/theme.css" />
 		<link rel="stylesheet" href="./styles/mobile.css" />
+		<link rel="stylesheet" href="./styles/tablet.css" />
+		<link rel="stylesheet" href="./styles/desktop.css" />
 	</head>
 	<body>
-		<!-- header -->
+		<!-- ? header -->
 		<header class="header">
 			<h1>
 				<svg
@@ -36,11 +38,15 @@
 			</h1>
 		</header>
 		<main>
-			<!-- input text -->
+			<!-- ? input text -->
 			<section class="input__area">
-				<textarea placeholder="Ingrese el texto aquí"></textarea>
+				<textarea
+					id="input-text"
+					autofocus
+					placeholder="Ingrese el texto aquí"
+				></textarea>
 			</section>
-			<!-- buttons -->
+			<!-- ? buttons -->
 			<section class="buttons__container">
 				<p class="buttons__container__caution">
 					<span>
@@ -60,15 +66,36 @@
 
 					Solo letras minúsculas y sin acentos
 				</p>
-				<button class="buttons buttons-blue">Encriptar</button>
-				<button class="buttons">Desencriptar</button>
+				<div>
+					<button id="encrypt-button" class="buttons buttons-blue">
+						Encriptar
+					</button>
+					<button id="decrypt-button" class="buttons">
+						Desencriptar
+					</button>
+				</div>
 			</section>
-			<!-- output tex -->
-			<section>
-				<!-- <textarea></textarea> -->
-				<p>Ningun mensaje fue encontrado</p>
-				<p>Ingresa el texto que desees encriptar o desencriptar</p>
+			<!-- ? output text -->
+			<section id="output-container" class="output__container">
+				<!-- * desaparece cuando se ejecuta la funcion encrypt o decrypt -->
+				<div id="default-appears" class="output__container__div">
+					<div><img src="./assets/muñeco.png" alt="muñeco" /></div>
+					<p>Ningún mensaje fue encontrado</p>
+					<p>Ingresa el texto que desees encriptar o desencriptar</p>
+				</div>
+				<!-- * aparece cuando se ejecuta la funcion encrypt o decrypt  -->
+				<div
+					id="execution-appears"
+					class="output__container__div execution__appears hidden__element"
+				>
+					<p id="result-message"></p>
+					<button id="copy-button" class="buttons hidden__element">
+						Copiar
+					</button>
+					<div id="toast" class="toast">Texto Copiado</div>
+				</div>
 			</section>
 		</main>
+		<script type="module" src="./js/index.js"></script>
 	</body>
 </html>

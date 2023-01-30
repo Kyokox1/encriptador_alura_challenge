@@ -1,7 +1,8 @@
 import { WORDS } from './constants.js';
 
-export const decrypt = (text) => {
+export const encrypt = (text) => {
 	if (!text) return;
+
 	// ? convierte el texto en minusculas y quita las tildes.
 	text = text
 		.toLowerCase()
@@ -9,7 +10,9 @@ export const decrypt = (text) => {
 		.replace(/[\u0300-\u036f]/g, '');
 
 	for (const array of WORDS) {
-		if (text.includes(array[1])) text = text.replaceAll(array[1], array[0]);
+		if (text.includes(array[0])) {
+			text = text.replaceAll(array[0], array[1]);
+		}
 	}
 
 	return text;

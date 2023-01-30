@@ -1,10 +1,45 @@
 body {
-	padding: 12px 10px;
+	padding: 12px 10px 30px;
 }
 
-.buttons__container {
+header {
+	padding-bottom: 50px;
+}
+
+main {
 	display: flex;
 	flex-direction: column;
+	gap: 50px;
+}
+
+/** input text section  */
+.input__area textarea {
+	width: 100%;
+	min-height: 50vh;
+	resize: none;
+	padding: 10px 15px;
+	font-size: 1.8rem;
+	background: transparent;
+	border: none;
+	color: inherit;
+	border-radius: 8px;
+}
+
+.input__area textarea::placeholder {
+	font-size: 1.8rem;
+	text-align: center;
+	color: var(--dark-blue-300);
+}
+
+.input__area textarea:focus {
+	outline: 1px solid var(--dark-blue-200);
+}
+
+/** buttons section */
+.buttons__container > div {
+	display: flex;
+	flex-direction: column;
+	align-items: center;
 	gap: 24px;
 }
 
@@ -12,12 +47,13 @@ body {
 	display: flex;
 	align-items: center;
 	gap: 5px;
-	margin-bottom: -15px;
+	margin-bottom: 16px;
 	font-size: 0.8rem;
 	color: var(--gray-400);
 }
 
 .buttons {
+	width: 100%;
 	max-width: 350px;
 	padding: 20px;
 	border-radius: 24px;
@@ -39,4 +75,65 @@ body {
 
 .buttons-blue:hover {
 	background: var(--dark-blue-400);
+}
+
+/** output text section */
+.output__container {
+	position: relative;
+	padding: 20px;
+	text-align: center;
+	color: var(--gray-500);
+	background: var(--white);
+	border-radius: 32px;
+	box-shadow: 0px 24px 32px -8px rgba(0, 0, 0, 0.08);
+}
+
+.output__container__div {
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+	gap: 8px;
+}
+
+.output__container p:first-child {
+	font-size: 1.5rem;
+	font-weight: 700;
+	color: var(--gray-400);
+}
+
+#result-message {
+	width: 100%;
+	max-height: 80vh;
+	overflow: auto;
+	font-size: 1.7rem;
+	font-weight: 400;
+}
+
+.hidden__element {
+	display: none;
+}
+
+/** Copy toast */
+
+.toast {
+	position: absolute;
+	bottom: 100px;
+	left: 50%;
+	transform: translateX(-50%);
+	width: max-content;
+	padding: 12px;
+	font-size: 1.2rem;
+	font-weight: 700;
+	color: #2d572c;
+	background-color: #30ff2499;
+	border-radius: 6px;
+	visibility: hidden;
+	opacity: 0;
+	transition: 0.5s all ease;
+}
+
+@media (min-width: 425px) {
+	.buttons__container__caution {
+		justify-content: center;
+	}
 }
