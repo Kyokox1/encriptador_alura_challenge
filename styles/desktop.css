@@ -41,6 +41,10 @@
 		justify-content: center;
 	}
 
+	.output__image {
+		display: block;
+	}
+
 	.output__container > div:last-child {
 		justify-content: space-between;
 		height: 100%;

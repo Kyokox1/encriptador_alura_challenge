@@ -95,10 +95,14 @@ main {
 	gap: 8px;
 }
 
-.output__container p:first-child {
+.output__default__message {
 	font-size: 1.5rem;
 	font-weight: 700;
 	color: var(--gray-400);
+}
+
+.output__image {
+	display: none;
 }
 
 #result-message {
