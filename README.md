@@ -2,8 +2,6 @@
 
 Link del proyecto al final ⬇
 
-https://aerolab-challenge-xwal.vercel.app
-
 ---
 
 Este es el primer Challenge del programa ONE - Oracle Next Education, donde se nos solicitó hacer un encriptador de texto, donde se podrá intercambiar mensajes secretos con otras personas que sepan el secreto de la encriptación utilizada.
@@ -41,6 +39,6 @@ Las "llaves" de encriptación que se utilizaron son las siguiente:
 
 ---
 
-[**Ir a la página del encriptador** ✌](https://msnutria.github.io/challenge01/)
+[**Ir a la página del encriptador** ✌](https://aerolab-challenge-xwal.vercel.app)
 
-## [**Ir a la maquetización Figma del diseño** ✌](https://www.figma.com/file/o9vZYKmB0p6xmEdb3EYYEH/Alura-Challenge---Desaf%C3%ADo-1---L%C3%B3gica?node-id=0%3A1&t=dQfXxqfLCjsaIWPk-0)
+## [**Ir a la maquetización Figma del diseño** ✌](https://www.figma.com/file/trP3p5nEh7XUyB3n2bomjP/Alura-Challenge---Desaf%C3%ADo-1---L%C3%B3gica)
