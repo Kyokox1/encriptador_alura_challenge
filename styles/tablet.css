@@ -1,0 +1,21 @@
+@media (min-width: 600px) {
+	body {
+		padding: 12px 20px 30px;
+	}
+	/** buttons section */
+	.buttons__container > div {
+		flex-direction: row;
+		justify-content: center;
+		width: 100%;
+	}
+
+	.buttons__container__caution {
+		justify-content: start;
+	}
+}
+
+@media (min-width: 820px) and (max-width: 997px) {
+	.buttons {
+		max-width: 100%;
+	}
+}

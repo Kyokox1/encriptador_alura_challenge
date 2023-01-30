@@ -1,0 +1,76 @@
+@media (min-width: 998px) {
+	body {
+		padding: 16px 14px;
+		height: 100vh;
+	}
+
+	header {
+		position: absolute;
+		padding-bottom: 0;
+	}
+
+	main {
+		display: grid;
+		grid-template-columns: 70% 1fr;
+		grid-template-rows: 80% 1fr;
+		gap: 0;
+		column-gap: 30px;
+		row-gap: 20px;
+		height: 100%;
+	}
+	/** input section */
+	.input__area {
+		padding-top: 70px;
+	}
+
+	.input__area textarea {
+		height: 100%;
+	}
+
+	/** buttons section */
+	.buttons__container {
+		grid-column: 1/2;
+		grid-row: 2/3;
+	}
+
+	/** output section */
+	.output__container {
+		grid-row: 1/3;
+		display: flex;
+		align-items: center;
+		justify-content: center;
+	}
+
+	.output__container > div:last-child {
+		justify-content: space-between;
+		height: 100%;
+		width: 100%;
+	}
+
+	#result-message {
+		max-width: 240px;
+	}
+}
+
+/* TODO: refactorizar media queries (max-width) no es relativo */
+@media (min-width: 1200px) {
+	body {
+		padding: 20px 16px 20px 30px;
+	}
+
+	#result-message {
+		max-width: 270px;
+	}
+}
+
+@media (min-width: 1400px) {
+	#result-message {
+		max-width: 300px;
+	}
+}
+
+@media (min-width: 1600px) {
+	#result-message {
+		max-width: 400px;
+	}
+}
